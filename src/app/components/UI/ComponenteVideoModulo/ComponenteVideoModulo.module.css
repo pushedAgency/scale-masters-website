@@ -1,0 +1,10 @@
+.divComponenteVideoModulo{
+    width: 100%;
+    border-radius: 1em;
+    padding: 1.5em;
+    justify-items:flex-start;
+}
+
+.divComponenteVideoModulo:hover{
+    background-color: var(--presionables-terceriarios-hover);
+}

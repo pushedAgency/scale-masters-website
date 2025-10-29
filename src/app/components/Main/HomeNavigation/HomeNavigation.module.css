@@ -1,0 +1,9 @@
+.modalSelectedModulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: baseline;
+  padding: 2em;
+  border-radius: 15px;
+  background-color: var(--presionables-secundarios-modals-default);
+}

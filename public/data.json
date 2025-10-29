@@ -1,0 +1,67 @@
+{
+  "Onboarding": {
+    "description": "Introducción al curso, mi historia y cómo aprovechar al máximo cada módulo.",
+    "emoji": "👋",
+    "videos": [
+      {
+        "filename": "Mi historia y proceso",
+        "playbackId": "",
+        "fecha": "2025-10-20T14:23:00Z"
+      }
+    ]
+  },
+
+  "Ecommerce": {
+    "description": "Aprendé estrategias para vender online, optimizar tus productos y analizar el mercado.",
+    "emoji": "💰",
+    "videos": [
+      {
+        "filename": "Ecommerce 1",
+        "playbackId": "",
+        "fecha": "2025-10-20T14:23:00Z"
+      },
+      {
+        "filename": "Ecommerce 2",
+        "playbackId": "",
+        "fecha": "2025-10-20T14:23:00Z"
+      },
+      {
+        "filename": "Ecommerce 3",
+        "playbackId": "",
+        "fecha": "2025-10-20T14:23:00Z"
+      },
+      {
+        "filename": "Ecommerce 4",
+        "playbackId": "",
+        "fecha": "2025-10-20T14:23:00Z"
+      }
+    ]
+  },
+
+  "Químicos": {
+    "description": "Todo sobre formulación, seguridad y desarrollo de productos químicos en laboratorio.",
+    "emoji": "⚗️",
+    "videos": [
+      {
+        "filename": "Quimicos 1",
+        "playbackId": "",
+        "fecha": "2025-10-20T14:23:00Z"
+      },
+      {
+        "filename": "Quimicos 2",
+        "playbackId": "",
+        "fecha": "2025-10-20T14:23:00Z"
+      },
+      {
+        "filename": "Quimicos 3",
+        "playbackId": "",
+        "fecha": "2025-10-20T14:23:00Z"
+      },
+      {
+        "filename": "Quimicos 4",
+        "playbackId": "",
+        "fecha": "2025-10-20T14:23:00Z"
+      }
+    ]
+  }
+}

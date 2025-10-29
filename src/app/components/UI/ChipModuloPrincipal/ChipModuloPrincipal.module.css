@@ -1,0 +1,23 @@
+.chipModuloPrincipal {
+  padding: 0.9em 2em;
+  border-radius: 10px;
+  background-color: var(--presionables-secundarios-modals-default);
+  transition: all 0.3s ease;
+  margin-bottom: 5px;
+  height: 3em;
+  width: 100%;
+}
+
+.chipModuloPrincipal:hover {
+  background-color: var(--presionables-secundarios-hover);
+  transform: translateY(-2px);
+}
+
+.chipModuloPrincipal.selected:hover {
+  transform: translateY(0);
+}
+
+.chipModuloPrincipal.selected {
+  background-color: var(--acento-primario-general);
+  color: var(--negro-primario) !important;
+}

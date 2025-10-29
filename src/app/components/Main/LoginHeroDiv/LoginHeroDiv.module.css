@@ -1,0 +1,10 @@
+.loginHeroDiv {
+  background-color: var(--presionables-secundarios-modals-default);
+  padding: 50px;
+  z-index: 100;
+  border-radius: 1.25em;
+
+  display: flex;
+  flex-direction: column;
+  
+}

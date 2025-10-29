@@ -1,26 +1,259 @@
 @import "tailwindcss";
 
+/* =============================
+   🌈 Variables globales
+============================= */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* 🎨 Colores primarios */
+  --negro-primario: #151515;
+  --blanco-primario: #f5f8fa;
+  --gris-primario: #888888;
+  --gris-secundario-desactivado: #454545;
+
+  /* 💧 Acentos generales */
+  --acento-primario-general: #24f3ff;
+  --acento-primario-general-hover: #00d4e5;
+  --acento-secundario-general: #00a9c0;
+  --acento-chips-categorias: #03869b;
+
+  /* 🌑 Fondos y elementos */
+  --fondo-primario: #0f161c;
+  --presionables-secundarios-modals-default: #1e262e;
+  --presionables-secundarios-hover: #2e4a5e;
+  --chips-modulos-primario-fondo: #2b404f;
+  --presionables-secundarios-contenido: #283843;
+  --presionables-terceriarios-hover: #105869;
+
+  /* 🔹 Tipografía global */
+  --font-plus-jakarta: "Plus Jakarta Sans", sans-serif;
+
+  /* =============================
+     TÍTULOS / BOTONES / CUERPO
+     Todo con Plus Jakarta Sans
+  ============================= */
+
+  /* Títulos Extraordinarios */
+  --titulos-extraordinarios-weight: 700;
+  --titulos-extraordinarios-px: 48px;
+  --titulos-extraordinarios-em: 3em;
+
+  /* Títulos Primarios */
+  --titulos-primarios-weight: 700;
+  --titulos-primarios-px: 24px;
+  --titulos-primarios-em: 1.5em;
+
+  /* Títulos 24 */
+  --titulos-24-weight: 700;
+  --titulos-24-px: 16px;
+  --titulos-24-em: 1em;
+
+  /* Botones 28 */
+  --botones-28-weight: 500;
+  --botones-28-px: 24px;
+  --botones-28-em: 1.5em;
+
+  /* Botones 24 */
+  --botones-24-weight: 500;
+  --botones-24-px: 16px;
+  --botones-24-em: 1em;
+
+  /* Botones 20 */
+  --botones-20-weight: 500;
+  --botones-20-px: 16px;
+  --botones-20-em: 1em;
+
+  /* Cuerpo 24 */
+  --cuerpo-24-weight: 400;
+  --cuerpo-24-px: 16px;
+  --cuerpo-24-em: 1em;
+
+  /* Cuerpo 22 */
+  --cuerpo-22-weight: 400;
+  --cuerpo-22-px: 16px;
+  --cuerpo-22-em: 1em;
+
+  /* Cuerpo 20 */
+  --cuerpo-20-weight: 400;
+  --cuerpo-20-px: 16px;
+  --cuerpo-20-em: 1em;
+
+  /* Cuerpo 18 */
+  --cuerpo-18-weight: 400;
+  --cuerpo-18-px: 16px;
+  --cuerpo-18-em: 1em;
+
+  /* Cuerpo 16 */
+  --cuerpo-16-weight: 400;
+  --cuerpo-16-px: 16px;
+  --cuerpo-16-em: 1em;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* =============================
+   🔹 Reset y transiciones
+============================= */
+* {
+  transition: all 0.2s ease-in-out;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* 🔧 Oculta scrollbar sin desactivar el scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE y Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
+/* =============================
+   🌐 Tipografía y colores globales
+============================= */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--fondo-primario);
+  font-family: var(--font-plus-jakarta);
+  color: var(--blanco-primario);
+}
+
+main {
+  padding: 0.5em 8em;
+}
+
+header {
+  height: 25svh;
+  border-radius: 0 0 2em 2em;
+}
+
+.accent {
+  color: var(--acento-primario-general);
+}
+
+input {
+  background-color: var(--blanco-primario) !important;
+  color: black;
+  font-size: 1em !important;
+  font-weight: 200 !important;
+  cursor: text !important;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+img,
+.borderRadius {
+  border-radius: 10px !important;
+}
+
+.margin {
+  margin: 1em 0 0 0;
+}
+
+/* =============================
+   🏷️ Clases Títulos
+============================= */
+.titulos-extraordinarios {
+  font-family: var(--font-plus-jakarta);
+  font-weight: var(--titulos-extraordinarios-weight);
+  font-size: var(--titulos-extraordinarios-px);
+  line-height: var(--titulos-extraordinarios-em);
+}
+
+.titulos-primarios {
+  font-family: var(--font-plus-jakarta);
+  font-weight: var(--titulos-primarios-weight);
+  font-size: var(--titulos-primarios-px);
+  line-height: var(--titulos-primarios-em);
+}
+
+.titulos-24 {
+  font-family: var(--font-plus-jakarta);
+  font-weight: var(--titulos-24-weight);
+  font-size: var(--titulos-24-px);
+  line-height: var(--titulos-24-em);
+}
+
+/* =============================
+   🏷️ Clases Botones
+============================= */
+.botones-28 {
+  font-family: var(--font-plus-jakarta);
+  font-weight: var(--botones-28-weight);
+  font-size: var(--botones-28-px);
+  line-height: var(--botones-28-em);
+}
+
+.botones-24 {
+  font-family: var(--font-plus-jakarta);
+  font-weight: var(--botones-24-weight);
+  font-size: var(--botones-24-px);
+  line-height: var(--botones-24-em);
+}
+
+.botones-20 {
+  font-family: var(--font-plus-jakarta);
+  font-weight: var(--botones-20-weight);
+  font-size: var(--botones-20-px);
+  line-height: var(--botones-20-em);
+}
+
+/* =============================
+   🏷️ Clases Cuerpo de texto
+============================= */
+.cuerpo-24 {
+  font-family: var(--font-plus-jakarta);
+  font-weight: var(--cuerpo-24-weight);
+  font-size: var(--cuerpo-24-px);
+  line-height: var(--cuerpo-24-em);
+}
+
+.cuerpo-22 {
+  font-family: var(--font-plus-jakarta);
+  font-weight: var(--cuerpo-22-weight);
+  font-size: var(--cuerpo-22-px);
+  line-height: var(--cuerpo-22-em);
+}
+
+.cuerpo-20 {
+  font-family: var(--font-plus-jakarta);
+  font-weight: var(--cuerpo-20-weight);
+  font-size: var(--cuerpo-20-px);
+  line-height: var(--cuerpo-20-em);
+}
+
+.cuerpo-18 {
+  font-family: var(--font-plus-jakarta);
+  font-weight: var(--cuerpo-18-weight);
+  font-size: var(--cuerpo-18-px);
+  line-height: var(--cuerpo-18-em);
+}
+
+.cuerpo-16 {
+  font-family: var(--font-plus-jakarta);
+  font-weight: var(--cuerpo-16-weight);
+  font-size: var(--cuerpo-16-px);
+  line-height: var(--cuerpo-16-em);
+}
+
+.cuerpo-12 {
+  font-family: var(--font-plus-jakarta);
+  font-weight: var(--cuerpo-16-weight);
+  font-size: 10px !important;
+  line-height: var(--cuerpo-16-em);
+}
+
+/* =============================
+   🏷️ Subtítulos y bodyText
+============================= */
+.subtitle {
+  color: var(--blanco-primario);
+  font-family: var(--font-plus-jakarta);
+  font-weight: 800;
+  font-size: 1.25em; /* antes 1.75em */
+}
+
+.bodyText {
+  color: var(--blanco-primario);
+  font-family: var(--font-plus-jakarta);
+  font-weight: 200;
+  font-size: 1em; /* antes 1.75em */
 }

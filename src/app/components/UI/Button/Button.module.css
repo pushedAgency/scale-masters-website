@@ -1,0 +1,53 @@
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Hover del botón */
+.button:hover::after {
+  opacity: 1;
+  transform: translateX(0); /* se desliza a su posición natural */
+}
+
+/* Disabled */
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Variantes */
+.primary {
+  background-color: var(--acento-primario-general);
+  color: #000;
+  border: none;
+}
+
+.primary:hover {
+  background-color: var(--acento-primario-general-hover);
+}
+
+.secondary {
+  background-color: transparent;
+  color: white;
+  border: 1px solid var(--blanco-primario);
+}
+
+.secondary:hover {
+  background-color: var(--acento-secundario-general-hover);
+}
+
+.third {
+  background-color: var(--presionables-secundarios-modals-default);
+}
+
+.third:hover {
+  background-color: var(--acento-secundario-general-hover);
+}

@@ -1,0 +1,51 @@
+.bannerModulos {
+  transition: all 0.3s ease;
+  height: 25vh;
+}
+
+.bannerModulos > .bannerModulosImg {
+  opacity: 0.1;
+}
+
+.bannerModulos:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+.bannerModulos:hover > .bannerModulosImg {
+  opacity: 0.8;
+}
+
+.bannerModulos.selected {
+  transform: scale(1);
+}
+
+.bannerModulos.selected > .bannerModulosImg {
+  opacity: 1;
+}
+
+.bannerModulos.selected::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    var(--negro-primario) 0%,
+    transparent 40%
+  );
+  z-index: 5; /* debajo del texto pero arriba de la imagen */
+  pointer-events: none; /* evita interferir con clics */
+}
+
+.bannerModulos.default::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    var(--negro-primario) 10%,
+    transparent 90%
+  );
+  z-index: 5; /* debajo del texto pero arriba de la imagen */
+  pointer-events: none; /* evita interferir con clics */
+}
