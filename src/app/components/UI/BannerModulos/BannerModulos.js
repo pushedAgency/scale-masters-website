@@ -10,30 +10,8 @@ export default function BannerModulos({
   modulo,
   disabled = false,
   type = "button",
-  isSelected = false, // ← nuevo prop
+  isSelected = false,
 }) {
-  // Diccionario con datos del módulo
-  const modulosInfo = {
-    Onboarding: {
-      emoji: "👋",
-      img: "/images/modulos/onboarding.png",
-    },
-    Ecommerce: {
-      emoji: "👨🏻‍💻",
-      img: "/images/modulos/ecommerce.jpg",
-    },
-    Químicos: {
-      emoji: "⚛️",
-      img: "/images/modulos/quimico.jpg",
-    },
-  };
-
-  // Si el módulo no está definido, fallback
-  const { emoji, img } = modulosInfo[modulo] || {
-    emoji: "📘",
-    img: "/images/modulos/default.jpg",
-  };
-
   return (
     <button
       type={type}
@@ -46,20 +24,28 @@ export default function BannerModulos({
       onClick={onClick}
       disabled={disabled}
     >
-      <div className={`${styles.bannerModulosImg} absolute inset-0`}>
-        <Image
-          src={img}
-          alt={modulo}
-          width={800}
-          height={400}
-          unoptimized
-          className="w-full h-full object-cover"
-        />
-      </div>
+      {/* Imagen de fondo con fallback */}
+      {modulo.img && modulo.img.trim() !== "" ? (
+        <div className={`${styles.bannerModulosImg} absolute inset-0`}>
+          <Image
+            src={modulo.img}
+            alt={modulo.description || modulo.name || "Imagen del módulo"}
+            width={800}
+            height={400}
+            unoptimized
+            className="w-full h-full object-cover"
+          />
+        </div>
+      ) : (
+        <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
+          <p className="text-gray-500">Sin imagen</p>
+        </div>
+      )}
 
-      <div className="relative z-10 flex items-end p-8 justify-center w-full h-full">
-        <p className="titulos-24 capitalize">
-          {emoji} {modulo}
+      {/* Texto sobre la imagen */}
+      <div className="relative z-10 flex items-end p-8 justify-center w-full h-full bg-black/30">
+        <p className="titulos-24 capitalize text-white drop-shadow-md text-center">
+          {modulo.emoji} {modulo.name}
         </p>
       </div>
     </button>

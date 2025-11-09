@@ -1,67 +1,358 @@
 {
-  "Onboarding": {
+  "onboarding": {
     "description": "Introducción al curso, mi historia y cómo aprovechar al máximo cada módulo.",
+    "img": "/images/modulos/onboarding.png",
     "emoji": "👋",
-    "videos": [
-      {
-        "filename": "Mi historia y proceso",
-        "playbackId": "",
-        "fecha": "2025-10-20T14:23:00Z"
-      }
-    ]
+    "subsections": {
+      "Introducción": [
+        {
+          "filename": "Video 1",
+          "playbackId": "",
+          "fecha": "2025-10-20T14:23:00Z"
+        }
+      ]
+    }
   },
 
-  "Ecommerce": {
+  "ecommerce": {
     "description": "Aprendé estrategias para vender online, optimizar tus productos y analizar el mercado.",
+    "img": "/images/modulos/ecommerce.jpg",
     "emoji": "💰",
-    "videos": [
-      {
-        "filename": "Ecommerce 1",
-        "playbackId": "",
-        "fecha": "2025-10-20T14:23:00Z"
-      },
-      {
-        "filename": "Ecommerce 2",
-        "playbackId": "",
-        "fecha": "2025-10-20T14:23:00Z"
-      },
-      {
-        "filename": "Ecommerce 3",
-        "playbackId": "",
-        "fecha": "2025-10-20T14:23:00Z"
-      },
-      {
-        "filename": "Ecommerce 4",
-        "playbackId": "",
-        "fecha": "2025-10-20T14:23:00Z"
-      }
-    ]
+    "subsections": {
+      "Reto Franco de 0 a 100K": [
+        {
+          "filename": "Breve introducción al reto",
+          "playbackId": "UBUdhRryuPhbaieMeki4i6eZsShWts291cxophY1Bpw"
+        },
+        {
+          "filename": "Clase 01 - Analisis de Pagina",
+          "playbackId": "LL1s00gzaOU1ab46zUUf00eZ01vciYLjZ2EMZ3S14W801TE"
+        },
+        {
+          "filename": "Clase 02 - Cambiando diseño de productos",
+          "playbackId": "R700Ug1JyCTKcbvEn01HviGIb1v72F7jg7bEks7S995YU"
+        },
+        {
+          "filename": "Clase 03 - Estructura nueva de Landing Page ganadora",
+          "playbackId": "hiqNwu00ENbZbhAszRqAxWI9f2tQw5cNrwckgsvKsDb00"
+        },
+        {
+          "filename": "Clase 04 - Buscando que testear",
+          "playbackId": "I01qNNYxII6emKv9m0257bzpjQlXDIXbbKk9OUndY3HSc"
+        },
+        {
+          "filename": "Clase 05 - Editando videos en vivo del testeo",
+          "playbackId": "ps1atRXQZREThLkwO6WhiPiOkDr4QF3SivpLtNLZJu00"
+        },
+        {
+          "filename": "Clase 06 - Analisis de Testeo y lanzamiento",
+          "playbackId": "GYsHaRNDvBfYDe2AUQhK3tSY15u8vXcE0168sXGu7TJA"
+        },
+        {
+          "filename": "Clase 07 - Buscando un nuevo Testeo",
+          "playbackId": "3RG3uZehi3tPiindRwJz9WVor9bIZ6dLK4zEhqvc3bE"
+        },
+        {
+          "filename": "Clase 08 - Analisis de Testeo 1",
+          "playbackId": "01uxoNCd00LKuwR02SO0256zw6xcS1NU02JmOjkwVPiplEBY"
+        },
+        {
+          "filename": "Clase 09 - Revisión de próximo Testeo y correcciones",
+          "playbackId": "wuAIjrpzsD4m5TfgwiG2sNXkj7BkqbjfFbEJ2vyvjSo"
+        }
+      ],
+      "Si ves esto te va a ir bien": [
+        {
+          "filename": "Como pasar de 0 a 100",
+          "playbackId": "KIl3zSgUMcm37onYi693y00ihqqZCZcaZxbwIf301ejzo",
+          "assetId": "LAiOjeEeZSS4MXRJUiaOBCE5E2e019GZ00eGvzkOZSYEI"
+        },
+        {
+          "filename": "Lo que tenes que saber antes de escalar",
+          "playbackId": "rQI4sLT4SFtc5n4sGywpZeeFNLfdTwh0002XAh7UXFF1w",
+          "assetId": "4UGzhTPPzFjgCbOdIwEqYaFvUcntx5T8z4Bn7USAYds"
+        },
+        {
+          "filename": "Problemas que vas a tener con tu negocio",
+          "playbackId": "Uis00NoumbJqFxD01es5Fvxdzd95b9M6wX2BOlXv58Mz00",
+          "assetId": "4w6GWarmRSDWJ3wyuwTRCiV23EK21RcDVGQble6OdgQ"
+        },
+        {
+          "filename": "Si no ves esto no te va a ir bien",
+          "playbackId": "9fc00Kpb01aUS00J3EE02qEi2q00K2zzEIo01A5k01C8972srM",
+          "assetId": "8QbGp3A2Ela2bpSbmegl6q00GqARe5k6ia2Z8MH01q9jY"
+        }
+      ],
+      "Creando tu empresa": [
+        {
+          "filename": "1 - Creando gmail de la empresa",
+          "assetId": "G01kMBjs36hsijdlnmSY00E8mI4gY5zsFbIdfqGJ9PVVU",
+          "playbackId": "eFOPN8L01OUFcbyikZYK7q5epMjpeOnFQjw1Q00UZraSg"
+        },
+        {
+          "filename": "2 - Creando instagram de la empresa",
+          "assetId": "kIeN00v2ExPvrEuxaAS2kLuxk8SvdL008vJ02cdeKFd00VA",
+          "playbackId": "004jjp9a02yPn8QaB4JHppMavntpVknEaMKTyWuqUajRM"
+        },
+        {
+          "filename": "3 - Creando tienda nube de la empresa",
+          "assetId": "yRIBpS9LaaZvqYzPaQThDyHahm02LkB51gOf011bWPUYw",
+          "playbackId": "ZQaq6nvBoAr8tGIGAIWmBnYpfJQbcWWwkDKQPM01FOEU"
+        },
+        {
+          "filename": "4 - Como poner banners en tienda nube y en instagram",
+          "assetId": "vddZ1SX01xCYNw7ln6UzLCgWq59QjHFBAaWOCraU2mw8",
+          "playbackId": "v016TVTguZUMROHgdssd5HYViZzSpTPfy8YN6cIoLlDQ"
+        },
+        {
+          "filename": "5 - Como colocar categorias principales con links",
+          "assetId": "01GQvQLu01yUpOhXmIRx4VIRUtye4C9jMnhq9L291sRes",
+          "playbackId": "Ts3xacW902ghmI9HcY52VGlk9ZKbmx5EFmDxzjjO7lZg"
+        },
+        {
+          "filename": "6 - Como cargar productos de relleno + variantes",
+          "assetId": "bI68WDW9SEQ101LOseawOMU7dmK4XwgkfTR5O1fQTPTw",
+          "playbackId": "G7pRc01O5faFLwedrp3adPbVxhfud8RkPlTV6BSRvEAk"
+        },
+        {
+          "filename": "7 - Aplicaciones que necesitamos para tienda nube",
+          "assetId": "ZUusX5OpV024I5XfDEMBBpSvZBVjhLdXfmlaucWo02KSs",
+          "playbackId": "01ufRwHqgz15poIVvze6WjF9sAhVNva00mSKR02bFVptLA"
+        },
+        {
+          "filename": "8 - Como crear testimonios en instagram",
+          "assetId": "r5YlpPNIPbPLSPruDv9vpAvdXqmxFPwg2M2501Carp2M",
+          "playbackId": "01ufRwHqgz15poIVvze6WjF9sAhVNva00mSKR02bFVptLA"
+        },
+        {
+          "filename": "9 - Como eliminar tu cuil de tu pagina",
+          "assetId": "ObvrUIEN2nNjSFUzitSBPMn4V00DPwRlo01rt3fJTR5D8",
+          "playbackId": "gQg364LkReiIw9l1gSRQRkPxxLPUybLFmphal01AgcI00"
+        },
+        {
+          "filename": "Como cargar un producto a tu tienda",
+          "assetId": "x1NMl6MbXDHDSRyKY00YJBeLAYUj5005Wmh02skqAlge6c",
+          "playbackId": "CDHgDkG39mepq5RkTL4pCVfHizmgZuoKK3PI7WQJaP00"
+        },
+        {
+          "filename": "Como hacer imagen de producto",
+          "assetId": "ZnTgGg6fZQ2QRu3YBW4snDzFCETh6MH007H00Hx7pnu5Q",
+          "playbackId": "9x4WfJRZrNy3IWculN8MN5wcNAtz901fsIBUYEAqXN1o"
+        },
+        {
+          "filename": "Como hacer una landing ganadora",
+          "assetId": "ZEa302dA00eaQ02UqB5NTDmPt1HgzKWqS33Ay01yeoGCuzM",
+          "playbackId": "fi2SNdbb60175nyXm5auT3Qzwhj3LNMgXCigVX6DXMOk"
+        },
+        {
+          "filename": "Descripcion para productos de relleno",
+          "assetId": "00ftxdU9b6IMspgm6DNTN8VBrVljFHBEO02IClRdVGG7E",
+          "playbackId": "tHGjnBmHwo2017xKGgxAoPCyYgQGX22Mpky02qN01GdKP8"
+        },
+        {
+          "filename": "Como vincular un dominio",
+          "playbackId": "GC202hglAq79T940062smH4O4TbwOTGNAFBhEz9IBn02Zk"
+        }
+      ],
+      "Cómo encontrar el producto que te cambie la vida": [
+        {
+          "filename": "Como buscar ofertas ganadoras",
+          "assetId": "nov5sWSk8PabE99Zqq1XsJn1Jrq9013SyWOuhiTq4B2A",
+          "playbackId": "MU4P00N8TBbT5TZhHHLdk6ysHLOy014fmyMqtNkZFb9ME"
+        },
+        {
+          "filename": "3 Formas de pensar testeos ganadores",
+          "assetId": "I01LccwhM62LEOdZRkuI6qgI00I5PXFtnKu5Yod7vSPDY",
+          "playbackId": "Zz01shFeYzHNQpqfVIDu02pwQSelkDcq02wiErvfepzo1I"
+        },
+        {
+          "filename": "Como buscaria un Winner para mi tienda (Actualizacion)",
+          "assetId": "8mP01328jAqF5Wvr5w178QiC7cSAChRRQs27hnHqzuNA",
+          "playbackId": "8kmIwQ4pxCQzDsd1ajPV9Dh8JtB8mj8zbNgfp8dnyTc"
+        }
+      ],
+      "Cómo sacar costos de producto": [
+        {
+          "filename": "Papeles fiscales para vender mejor (Ver si o si)",
+          "assetId": "VYxX7TdhVbKykLKbcn8Cs4TQ96Q14025D7aL1fNgM9vM",
+          "playbackId": "jRflSQcLgGZNbhLTPMUlXvGQ1fsjcfZRv2iyJ8n8Dkc"
+        },
+        {
+          "filename": "Clase de costos",
+          "assetId": "OHOI2R3ZZIYINroUSyb5myZoyvz7qza4cu9Bp8cYBSU",
+          "playbackId": "Hxa3K5W01U00bjWPbCloG5f301t26xkEYLp2qChppvq53Y"
+        },
+        {
+          "filename": "Como calcular bien los costos (Break)",
+          "assetId": "kuXqHTuhOstBtI019JN7CuDm6QMZ7U3BHp6dkK5vZJfc",
+          "playbackId": "kZAotjhSLTtbVYIglKEI8hQZZb2015Avbs19sQenfDl4"
+        },
+        {
+          "filename": "Como sacar la rentabilidad diaria (Importante)",
+          "assetId": "wbRTMB9OZPaDGHBhiV63N7x49wobFga402B8F4T4RgII",
+          "playbackId": "FJ9A3hXfr3IUNY2qYBIipKzw00jZbRVc0101I4G01gLsYzo"
+        }
+      ],
+
+      "Cómo hacer videos 100% convertidores": [
+        {
+          "filename": "Guiones ganadores",
+          "assetId": "kAewzynx01ttEBjtBVkYnxndWviNKKrFuVQNg1CEN9pI",
+          "playbackId": "XhptLh6hUR2iGCNu7TBGIWyhVgGZC012nrJNXbF00G1EA"
+        },
+        {
+          "filename": "Como hacer guiones",
+          "assetId": "98B9XMfUHKu01WVPjK3xX4OWPLijoSCaPoGuCHY8NECg",
+          "playbackId": "JCfjUmWpGTAWPWM9dFPatcEwEF77ObhZdWghWwpM01Po"
+        },
+        {
+          "filename": "Como editar creativos",
+          "assetId": "uZRtCg77Yr59M02trnZVRCFWX5c5wrhA2imtOhXYc284",
+          "playbackId": "CbylJboLtZ8n6YERRUsj6lwk2e00YFfCPp4kLa01800W02A"
+        }
+      ],
+
+      "Cómo lanzar un testeo": [
+        {
+          "filename": "Clase 01 - Creando cuenta Business Manager",
+
+          "playbackId": "z7JL01eQrdtwhl4RT02GJaJwknYN02IjMDO72LkbMS9Sg8",
+          "assetId": "BTVbonVRNdfc56h4013zCUhGad7ro029iN6VjQpXVt4dI"
+        },
+        {
+          "filename": "Clase 02 - Creando portafolio comercial",
+
+          "playbackId": "Vlz2ryYUc00VA01hgC500MAP3CPGjziuxPzKS595A9dcOY",
+          "assetId": "lcfhOqWXBeJvWIuZZYDavoRlkFHNuTURCwg00bz6XMlo"
+        },
+        {
+          "filename": "Clase 03 - Creando página y cuenta publicitaria",
+
+          "playbackId": "hhn01vlb02jMyixSbi6B6bovPh3lxVFkF7unFjdIzN9bY",
+          "assetId": "JUPWjhQNjewvm9k02SAghrgkD01f00XHPD6zu4VbOxoYJ4"
+        },
+        {
+          "filename": "Cómo lanzar un testeo en Meta (ADS)",
+
+          "playbackId": "x5yXMHMTrGSCXx7MLvhF4setqAdys7fzFAhutw6vBQ4",
+          "assetId": "VwW005RLtMJubXWpkroLypL4ZUuodD4RlbHZvdx1FXaM"
+        },
+        {
+          "filename": "Cómo subir una campaña de calentamiento",
+
+          "playbackId": "TVGuKNuN3RgrovzvNMZI5F00Jm5UnLWBPMnbDCwZoKKc",
+          "assetId": "H01umxorNUjI00Xlbjt02UCCAYbL4a00bNTpBkZiJgQjVrE"
+        },
+        {
+          "filename": "Teorico ABO",
+          "assetId": "wbkcdNmmZhKvd01HjjL8EM5gC1znAMxWPDOCFzbNdEMk",
+          "playbackId": "7ThfxnBrXsxvQei8DGKzhtN2fdSJTSwlM2zrOS27FdI"
+        },
+        {
+          "filename": "Como lanzar una ABO (Testeo) Actualizado",
+          "assetId": "Hg3BdYXqqKzmHT3l1ZtqLFEUpyxANJ00FTDoqW9P9fK00",
+          "playbackId": "Sr01Ti4JpSOAcTxYxP1jxyD3VjvZZfwa3DCTXyZQp8200"
+        },
+        {
+          "filename": "Rutina para hacer un testeo",
+          "assetId": "dGWYk5CX3FWHfD2XuRtVddUM6eF02V1rKvCHemt25fV4",
+          "playbackId": "c9UcAF1900A1mBzhJh024zpWl6IujoVTWEZpmKQK004DYM"
+        }
+      ],
+      "Cómo hacerte un experto en las métricas": [
+        {
+          "filename": "Personalizar la columna de META",
+          "assetId": "JAD6phTC42gfaNAefZYY002W9GD3thCwRIsiUiG1wJ74",
+          "playbackId": "ktWn02701TcyL3MzGjWhTevcCqYrrhjgDGVKnU1cmLu8w"
+        },
+        {
+          "filename": "Metricas clave para el testeo",
+          "assetId": "NwXpASoRr8E9bwJbylgFGju302D00L6hyW8024TE9602pGg",
+          "playbackId": "hPb00bVym4ZvywhFerEeRi7YOs35UXdnJkxD46yV5YLY"
+        }
+      ],
+      "Teoría/Práctica escalado": [
+        {
+          "filename": "Explicacion y practica de la CBO",
+          "assetId": "gsiztuHNmnX5fC502Ytj3po00WEfIplt5Rp9Tt02pQ11ns",
+          "playbackId": "gGORqzWeA1hqS7H6o8hh9AEreQKB6NnwcZelaQVhmgU"
+        },
+        {
+          "filename": "Lectura de metricas CBO + CP",
+          "playbackId": "54QfRVpycc01yAdfqoo52diyp00aRkOK1rwqfSXYa3pLo"
+        }
+      ],
+
+      "Optimización de campañas/testeo": [
+        {
+          "filename": "Estas perdiendo plata y no te das cuenta",
+          "assetId": "A7MfKu0128F8j18kyrUZtmr5q6fn00pp2CTDAwgsqwW2M",
+          "playbackId": "YCQejVUyMHN26dBrYDvby00x83e1RRnM2wCJtNfkwhA00"
+        },
+        {
+          "filename": "Proceso de optimización testeo winner",
+          "assetId": "al9MSf4M9qxnX2hpDz4TLj33Q02IPSoiO500ps6oh02zHU",
+          "playbackId": "RX52aFRD3ZUzAyU9lTrhXECAMDPXR6003HBkLZcbv9As"
+        },
+        {
+          "filename": "No tires tu plata",
+          "playbackId": "z1Lnz00wdYAA5xxedy1jbzgRhBrX1sea702K00Ga3aWLhM"
+        }
+      ]
+    }
   },
 
-  "Químicos": {
+  "químicos": {
     "description": "Todo sobre formulación, seguridad y desarrollo de productos químicos en laboratorio.",
+    "img": "/images/modulos/quimico.jpg",
     "emoji": "⚗️",
-    "videos": [
-      {
-        "filename": "Quimicos 1",
-        "playbackId": "",
-        "fecha": "2025-10-20T14:23:00Z"
-      },
-      {
-        "filename": "Quimicos 2",
-        "playbackId": "",
-        "fecha": "2025-10-20T14:23:00Z"
-      },
-      {
-        "filename": "Quimicos 3",
-        "playbackId": "",
-        "fecha": "2025-10-20T14:23:00Z"
-      },
-      {
-        "filename": "Quimicos 4",
-        "playbackId": "",
-        "fecha": "2025-10-20T14:23:00Z"
-      }
-    ]
+    "subsections": {
+      "Introducción": [
+        {
+          "filename": "Clase que tenes que ver si o si",
+          "playbackId": "1JYQlVni5B2m00yvXLXgqbXF009XQKFR4rrcJH5xDEb6w"
+        },
+        {
+          "filename": "Investigación de productos",
+          "playbackId": "P94cX3pM3LJGfL8CjPgyc52VZXP00gJu7SBsJvw9tn3E"
+        },
+        {
+          "filename": "Cómo replicar imágenes para tu tienda",
+          "playbackId": "H67CXzBBd8h019023Ukc794026NFO1jK2nPTYowHtPUttQ"
+        },
+        {
+          "filename": "Clase 1 - Todo lo que tenés que saber para testear",
+          "playbackId": "bmza7cqEh8s4LT8JjDL6guUHaOVSQPWL781X3br72CI"
+        },
+        {
+          "filename": "Clase 2 - Tabla de costos de producto",
+          "playbackId": "oxy5UL44978uVOIV19RMYAi4VM0237P3XSf1Gwb00ay02M"
+        },
+        {
+          "filename": "Clase 3 - Primer investigación de productos",
+          "playbackId": "Dlktc5qQSKuxx4DUWm3XcZMoW6Lecn02F6JWNw2NYXM00"
+        },
+        {
+          "filename": "Clase 4 - Procedimiento de cómo lanzar testeo (Organización + Traducción)",
+          "playbackId": "zTVk1nSv8KdbolLKp02tqnNW7AZyoWGreYtqltSoj6cQ"
+        },
+        {
+          "filename": "Clase 5 - Procedimiento de cómo lanzar testeo (Precios MVP)",
+          "playbackId": "buJUigjn6fkJJaSh01tD01x4rrHWwtLqVjYeg4U6ULluA"
+        },
+        {
+          "filename": "Clase 6 - Procedimiento de cómo lanzar testeo (Réplica videos)",
+          "playbackId": "QAXwvpEWVRZoV2s8HgbEDoQGKvbEn84qkyXpgeI5cNM"
+        },
+        {
+          "filename": "Clase 7 - Cómo crear la página en Shopify",
+          "playbackId": "XAQB01YxU0202UmNZI6ETWir1IE502eI00wM00pxmfH00sG7GY"
+        },
+        {
+          "filename": "Clase 8 - Procedimiento de cómo lanzar testeo (Ads manager CBO)",
+          "playbackId": "dDhnPIkCytmzmcNAf01rn01baSLJ5B02yPhNqu7c00JIilY"
+        }
+      ]
+    }
   }
 }

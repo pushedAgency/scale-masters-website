@@ -9,7 +9,7 @@ export default function ChipModuloPrincipal({ variant, children, onClick }) {
       className={`
         ${styles.chipModuloPrincipal}
         ${styles[variant] || ""}
-        botones-24 flex items-center
+        botones-24 flex items-center text-start leading-relaxed
       `}
       onClick={onClick}
     >

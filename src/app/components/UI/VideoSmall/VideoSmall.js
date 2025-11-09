@@ -6,7 +6,9 @@ import styles from "@/app/components/UI/VideoSmall/VideoSmall.module.css";
 const VideoSmall = ({ variant, data }) => {
   return (
     <section>
-      <a className={`p-5 flex flex-col borderRadius ${styles.buttonVideoSmall} ${styles[variant]}`}>
+      <a
+        className={`p-5 flex flex-col borderRadius ${styles.buttonVideoSmall} ${styles[variant]}`}
+      >
         <Image
           src={`/images/videoThumbnail.png`}
           alt="Video Thumbnail"
@@ -15,7 +17,9 @@ const VideoSmall = ({ variant, data }) => {
           unoptimized
           className={`${styles.imageThumbnail}`}
         />
-        <h4 className={`${styles.chipCategorias} cuerpo-12 mt-2`}>{data.modulo}</h4>
+        <h4 className={`${styles.chipCategorias} cuerpo-12 mt-2`}>
+          {data.modulo}
+        </h4>
         <p className={`${styles.title} cuerpo-16 mt-2`}>{data.filename}</p>
         <p className="accent cuerpo-16">00:00</p>
       </a>

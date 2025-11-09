@@ -1,33 +1,22 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
-import Image from "next/image";
 
-import styles from "@/app/components/UI/VolverButton/VolverButton.module.css";
-import stylesButton from "@/app/components/UI/Button/Button.module.css";
-import ChipsModulosSmall from "@/app/components/UI/ChipsModulosNavegacion/ChipsModulosSmall";
+import React, { useRef, useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import ChipsModulosSmall from "./ChipsModulosSmall";
 import Button from "@/app/components/UI/Button/";
 import VolverButton from "@/app/components/UI/VolverButton/VolverButton";
-import NavegacionSection from "@/app/components/UI/ChipsModulosNavegacion/NavegacionSection";
+import stylesButton from "@/app/components/UI/Button/Button.module.css";
+import styles from "@/app/components/UI/VolverButton/VolverButton.module.css";
 
-const allModulos = [
-  "Onboarding",
-  "Ecommerce",
-  "Químicos",
-  "Módulo 4",
-  "Módulo 5",
-  "Módulo 6",
-  "Módulo 7",
-  "Módulo 8",
-  "Módulo 9",
-  "Módulo 10",
-  "Módulo 11",
-  "Módulo 12",
-];
-
-const ChipsModulosNavegacion = ({ href, page, modulo }) => {
+const ChipsModulosNavegacion = ({ href, modulo, allModulos, onSelect }) => {
   const scrollRef = useRef(null);
+  const [selectedModulo, setSelectedModulo] = useState(
+    modulo || (allModulos && allModulos[0])
+  );
 
-  const [selectedModulo, setSelectedModulo] = useState(modulo || allModulos[0]);
+  useEffect(() => {
+    if (modulo) setSelectedModulo(modulo);
+  }, [modulo]);
 
   const handleScroll = (direction) => {
     if (!scrollRef.current) return;
@@ -38,18 +27,36 @@ const ChipsModulosNavegacion = ({ href, page, modulo }) => {
     });
   };
 
-  // Actualizar el módulo seleccionado si cambia la prop 'modulo'
-  useEffect(() => {
-    if (modulo) setSelectedModulo(modulo);
-  }, [modulo]);
+  if (!allModulos || allModulos.length === 0) return null;
+
+  // 🎬 Variants para animación secuencial
+  const containerVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { staggerChildren: 0.1 },
+    },
+  };
+
+  const chipVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+  };
 
   return (
-    <div className="relative w-full space-y-4 mb-5">
-      {/* Botones de navegación */}
+    <motion.div
+      className="relative w-full space-y-4 mb-5"
+      initial={{ opacity: 0, y: 15 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
+      {/* 🔙 Volver */}
       <div className="flex w-full justify-between">
-        <VolverButton href={href} />
+        <VolverButton href={"/home"} />
       </div>
 
+      {/* ⬅️➡️ Botones scroll */}
       <div className="flex gap-2 mt-5">
         <Button
           className={`${stylesButton.button} px-6 py-3`}
@@ -70,31 +77,35 @@ const ChipsModulosNavegacion = ({ href, page, modulo }) => {
         </Button>
       </div>
 
-      {/* Contenedor scrollable con gradiente */}
+      {/* 🔹 Lista de chips con animación secuencial */}
       <div
         className="relative w-full overflow-x-auto no-scrollbar mt-5"
         ref={scrollRef}
       >
-        <div className="inline-flex min-w-max gap-4">
-          {allModulos.map((mod, index) => (
-            <ChipsModulosSmall
-              key={index}
-              status={mod === selectedModulo ? "primary" : "third"}
-              newVideo={mod === selectedModulo}
-              onClick={() => setSelectedModulo(mod)} // 🔹 Esto hace que el chip se seleccione
-            >
-              {mod}
-            </ChipsModulosSmall>
+        <motion.div
+          className="inline-flex min-w-max gap-4"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {allModulos.map((name, index) => (
+            <motion.div key={index} variants={chipVariants}>
+              <ChipsModulosSmall
+                status={name === selectedModulo ? "primary" : "third"}
+                onClick={() => {
+                  setSelectedModulo(name);
+                  if (onSelect) onSelect(name);
+                }}
+              >
+                {name}
+              </ChipsModulosSmall>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <div className={`${styles.scrollGradientRight}`} />
       </div>
-
-      {page === "modulo" && (
-        <NavegacionSection page={page} modulo={selectedModulo} />
-      )}
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,6 +1,6 @@
 .bannerModulos {
   transition: all 0.3s ease;
-  height: 25vh;
+  height: 25vh !important;
 }
 
 .bannerModulos > .bannerModulosImg {
