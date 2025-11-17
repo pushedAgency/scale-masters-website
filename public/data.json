@@ -3,12 +3,22 @@
     "description": "Introducción al curso, mi historia y cómo aprovechar al máximo cada módulo.",
     "img": "/images/modulos/onboarding.png",
     "emoji": "👋",
-    "subsections": {
+    "submodulo": {
       "Introducción": [
         {
-          "filename": "Video 1",
-          "playbackId": "",
-          "fecha": "2025-10-20T14:23:00Z"
+          "filename": "Introducción al Onboarding",
+          "playbackId": "vtnQy2bNgJQmthAIRf02WRKfW8SNlpg93bxPq6zOyq2I",
+          "fecha": "2025-11-16T14:23:00Z"
+        },
+        {
+          "filename": "Aplicaciones y herramientas que tenés que usar",
+          "playbackId": "01e01C008PBp8Z3bdtKJlb400xPAB8Si47LWgoekHLEppQg",
+          "fecha": "2025-11-16T14:23:00Z"
+        },
+        {
+          "filename": "¿Qué es Testear?",
+          "playbackId": "IWfQtWmuMYOZWO59G00ir4qOnx9oeCXfyukJsvdwT01100",
+          "fecha": "2025-11-16T14:23:00Z"
         }
       ]
     }
@@ -18,7 +28,7 @@
     "description": "Aprendé estrategias para vender online, optimizar tus productos y analizar el mercado.",
     "img": "/images/modulos/ecommerce.jpg",
     "emoji": "💰",
-    "subsections": {
+    "submodulo": {
       "Reto Franco de 0 a 100K": [
         {
           "filename": "Breve introducción al reto",
@@ -194,7 +204,7 @@
         }
       ],
 
-      "Cómo hacer videos 100% convertidores": [
+      "Cómo hacer videos convertidores": [
         {
           "filename": "Guiones ganadores",
           "assetId": "kAewzynx01ttEBjtBVkYnxndWviNKKrFuVQNg1CEN9pI",
@@ -271,7 +281,7 @@
           "playbackId": "hPb00bVym4ZvywhFerEeRi7YOs35UXdnJkxD46yV5YLY"
         }
       ],
-      "Teoría/Práctica escalado": [
+      "Teoría y Práctica escalado": [
         {
           "filename": "Explicacion y practica de la CBO",
           "assetId": "gsiztuHNmnX5fC502Ytj3po00WEfIplt5Rp9Tt02pQ11ns",
@@ -283,7 +293,7 @@
         }
       ],
 
-      "Optimización de campañas/testeo": [
+      "Optimización de campañas y testeos": [
         {
           "filename": "Estas perdiendo plata y no te das cuenta",
           "assetId": "A7MfKu0128F8j18kyrUZtmr5q6fn00pp2CTDAwgsqwW2M",
@@ -302,11 +312,11 @@
     }
   },
 
-  "químicos": {
+  "quimicos": {
     "description": "Todo sobre formulación, seguridad y desarrollo de productos químicos en laboratorio.",
     "img": "/images/modulos/quimico.jpg",
     "emoji": "⚗️",
-    "subsections": {
+    "submodulo": {
       "Introducción": [
         {
           "filename": "Clase que tenes que ver si o si",

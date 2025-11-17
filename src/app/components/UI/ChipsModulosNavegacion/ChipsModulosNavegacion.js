@@ -10,13 +10,16 @@ import styles from "@/app/components/UI/VolverButton/VolverButton.module.css";
 
 const ChipsModulosNavegacion = ({ href, modulo, allModulos, onSelect }) => {
   const scrollRef = useRef(null);
-  const [selectedModulo, setSelectedModulo] = useState(
-    modulo || (allModulos && allModulos[0])
-  );
+  const [selectedModulo, setSelectedModulo] = useState(null);
 
+  // ✅ Asegura que el chip correcto se actualice cuando "modulo" cambie
   useEffect(() => {
-    if (modulo) setSelectedModulo(modulo);
-  }, [modulo]);
+    if (modulo) {
+      setSelectedModulo(modulo);
+    } else if (allModulos?.length > 0) {
+      setSelectedModulo(allModulos[0]);
+    }
+  }, [modulo, allModulos]);
 
   const handleScroll = (direction) => {
     if (!scrollRef.current) return;
@@ -29,7 +32,6 @@ const ChipsModulosNavegacion = ({ href, modulo, allModulos, onSelect }) => {
 
   if (!allModulos || allModulos.length === 0) return null;
 
-  // 🎬 Variants para animación secuencial
   const containerVariants = {
     hidden: { opacity: 0, y: 10 },
     visible: {
@@ -51,33 +53,34 @@ const ChipsModulosNavegacion = ({ href, modulo, allModulos, onSelect }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      {/* 🔙 Volver */}
-      <div className="flex w-full justify-between">
+      <div className="flex w-full justify-between absolute mt-4">
         <VolverButton href={"/home"} />
       </div>
 
-      {/* ⬅️➡️ Botones scroll */}
-      <div className="flex gap-2 mt-5">
-        <Button
-          className={`${stylesButton.button} px-6 py-3`}
-          variant="secondary"
-          type="button"
-          onClick={() => handleScroll("left")}
-        >
-          &lt;
-        </Button>
+      <div className="flex gap-2 mt-5 float-right">
+        <div className="button-arrow">
+          <Button
+            className={`${stylesButton.button} px-6 py-3 button-arrow`}
+            variant="secondary"
+            type="button"
+            onClick={() => handleScroll("left")}
+          >
+            &lt;
+          </Button>
+        </div>
 
-        <Button
-          className={`${stylesButton.button} px-6 py-3`}
-          variant="secondary"
-          type="button"
-          onClick={() => handleScroll("right")}
-        >
-          &gt;
-        </Button>
+        <div className="button-arrow">
+          <Button
+            className={`${stylesButton.button} px-6 py-3`}
+            variant="secondary"
+            type="button"
+            onClick={() => handleScroll("right")}
+          >
+            &gt;
+          </Button>
+        </div>
       </div>
 
-      {/* 🔹 Lista de chips con animación secuencial */}
       <div
         className="relative w-full overflow-x-auto no-scrollbar mt-5"
         ref={scrollRef}

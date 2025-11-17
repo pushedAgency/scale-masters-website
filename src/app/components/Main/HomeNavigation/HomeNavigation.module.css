@@ -5,5 +5,6 @@
   align-items: baseline;
   padding: 2em;
   border-radius: 15px;
+  height: fit-content;
   background-color: var(--presionables-secundarios-modals-default);
 }

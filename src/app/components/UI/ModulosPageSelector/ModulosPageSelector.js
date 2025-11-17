@@ -2,15 +2,26 @@
 
 import React, { useState, useEffect } from "react";
 import ChipsModulosNavegacion from "@/app/components/UI/ChipsModulosNavegacion/ChipsModulosNavegacion";
-import VolverButton from "@/app/components/UI/VolverButton/VolverButton";
 import NavegacionSection from "@/app/components/UI/ChipsModulosNavegacion/NavegacionSection";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
-export default function ModuloPageSelector({ id }) {
+export default function ModuloPageSelector({ id, submodulo }) {
   const [moduloData, setModuloData] = useState(null);
   const [subsectionNames, setSubsectionNames] = useState([]);
   const [selectedSubsection, setSelectedSubsection] = useState(null);
   const [videos, setVideos] = useState([]);
+  const [selectedVideo, setSelectedVideo] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+
+  // Normaliza los strings para compararlos: sin acentos, minúsculas, sin espacios/guiones
+  const normalize = (str) =>
+    str
+      ?.normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "") // quita acentos
+      .replace(/[\s-]+/g, "") // quita espacios y guiones
+      .toLowerCase()
+      .trim();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,32 +39,19 @@ export default function ModuloPageSelector({ id }) {
           return;
         }
 
-        // ✅ Detectar estructura flexible
-        let subsections = {};
-        let names = [];
-
-        if (
-          currentModulo.subsections &&
-          typeof currentModulo.subsections === "object" &&
-          !Array.isArray(currentModulo.subsections)
-        ) {
-          subsections = currentModulo.subsections;
-          names = Object.keys(subsections);
-        }
-
-        setModuloData({ ...currentModulo, subsections });
+        const names = currentModulo.submodulo ? Object.keys(currentModulo.submodulo) : [];
+        setModuloData(currentModulo);
         setSubsectionNames(names);
 
-        // ✅ Si tiene subsecciones
-        if (names.length > 0) {
-          const firstSub = names[0];
-          setSelectedSubsection(firstSub);
-          setVideos(subsections[firstSub] || []);
-        } else {
-          // ✅ Si no tiene subsecciones, usar videos directamente
-          setSelectedSubsection("videos");
-          setVideos(currentModulo.videos || []);
-        }
+        // Decodificar submodulo de la URL
+        const decodedSub = submodulo ? decodeURIComponent(submodulo) : null;
+
+        // Buscar coincidencia normalizada
+        const matched = names.find((name) => normalize(name) === normalize(decodedSub));
+
+        const firstSub = matched || names[0] || "videos";
+        setSelectedSubsection(firstSub);
+        setVideos(currentModulo.submodulo?.[firstSub] || currentModulo.videos || []);
       } catch (error) {
         console.error("❌ Error cargando data.json:", error);
       } finally {
@@ -62,37 +60,35 @@ export default function ModuloPageSelector({ id }) {
     };
 
     fetchData();
-  }, [id]);
+  }, [id, submodulo]);
 
   const handleSelectSubsection = (subName) => {
     if (!moduloData) return;
 
-    if (subName === "videos") {
-      setSelectedSubsection(subName);
-      setVideos(moduloData.videos || []);
-      return;
-    }
-
-    const selectedVideos = moduloData.subsections?.[subName] || [];
     setSelectedSubsection(subName);
-    setVideos(selectedVideos);
+    setVideos(moduloData.submodulo?.[subName] || moduloData.videos || []);
+    setSelectedVideo(null);
+  };
+
+  const handleSelectVideo = (video) => {
+    setSelectedVideo(video);
   };
 
   if (isLoading)
     return (
       <div className="flex justify-center mt-10">
-        <img src="/icons/loading.gif" alt="" className="w-8" />
+        <Image height={100} width={100} src="/icons/loading.gif" alt="" className="w-8" />
       </div>
     );
-  if (!moduloData)
-    return <p className="text-center mt-10">Módulo no encontrado.</p>;
+
+  if (!moduloData) return <p className="text-center mt-10">Módulo no encontrado.</p>;
 
   return (
     <div className="space-y-6">
       {subsectionNames.length > 0 ? (
         <ChipsModulosNavegacion
           page="modulo"
-          modulo={selectedSubsection}
+          modulo={selectedSubsection} // aquí va el chip seleccionado
           allModulos={subsectionNames}
           onSelect={handleSelectSubsection}
         />
@@ -102,10 +98,29 @@ export default function ModuloPageSelector({ id }) {
         </p>
       )}
 
+      {selectedVideo && (
+        <motion.div
+          key={selectedVideo.id || selectedVideo.filename}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="w-full mb-5 rounded-2xl overflow-hidden shadow-lg"
+        >
+          <iframe
+            src={`https://player.mux.com/${selectedVideo.playbackId}?autoplay=false&muted=false&controls=true&accent-color=%2324f3ff`}
+            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+            allowFullScreen
+            style={{ width: "100%", border: "none", aspectRatio: "16/9" }}
+            title={selectedVideo.filename || "Video Mux"}
+          />
+        </motion.div>
+      )}
+
       <NavegacionSection
         page="modulo"
         id={selectedSubsection}
         videos={videos}
+        onSelectVideo={handleSelectVideo}
       />
     </div>
   );

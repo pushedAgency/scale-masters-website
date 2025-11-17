@@ -17,6 +17,8 @@ const HomeNavigation = () => {
   const [selectedChips, setSelectedChips] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
+  console.log(selectedChips);
+
   // 🔹 Cargar data.json
   useEffect(() => {
     const fetchData = async () => {
@@ -56,14 +58,20 @@ const HomeNavigation = () => {
 
   // ✅ Obtener los “videos” o “subsecciones” según el tipo de módulo
   const currentVideos =
-    currentModulo.subsections && Object.keys(currentModulo.subsections).length
-      ? Object.keys(currentModulo.subsections).map((title) => ({
+    currentModulo.submodulo && Object.keys(currentModulo.submodulo).length
+      ? Object.keys(currentModulo.submodulo).map((title) => ({
           filename: title,
         }))
       : currentModulo.videos || [];
 
   const currentChipIndex = selectedChips[selectedModulo] || 0;
   const currentVideo = currentVideos[currentChipIndex];
+
+  // 🔹 Determinar el submódulo actual (si existen subsecciones)
+  const currentSubModulo =
+    currentModulo.submodulo && Object.keys(currentModulo.submodulo).length
+      ? Object.keys(currentModulo.submodulo)[currentChipIndex]
+      : null;
 
   // 🔹 Handlers
   const handleChipClick = (index) => {
@@ -142,14 +150,14 @@ const HomeNavigation = () => {
 
             {/* Derecha: Detalle y preview */}
             <div className={`w-1/2 ${styles.modalSelectedModulo}`}>
-              <Image
+              {/*<Image
                 src={`/images/videoThumbnail.png`}
                 alt={selectedModulo}
                 width={1920}
                 height={1080}
                 unoptimized
                 className={styles.imageThumbnail}
-              />
+              />*/}
 
               {currentVideo && (
                 <>
@@ -158,7 +166,7 @@ const HomeNavigation = () => {
                   </p>
 
                   <p className="mt-5 text-start leading-relaxed">
-                    {currentModulo.subsections
+                    {currentModulo.submodulo
                       ? "Esta subsección contiene clases y casos prácticos del módulo."
                       : `Este módulo incluye ${currentVideos.length} video(s) con contenido práctico.`}
                   </p>
@@ -176,7 +184,7 @@ const HomeNavigation = () => {
                     />
                     <p className="cuerpo-24">
                       {currentVideos.length}{" "}
-                      {currentModulo.subsections
+                      {currentModulo.submodulo
                         ? "módulos disponibles"
                         : "videos disponibles"}
                     </p>
@@ -188,7 +196,9 @@ const HomeNavigation = () => {
                 className={`${stylesButton.button}`}
                 variant="primary"
                 type="button"
-                href={`/modulo/${selectedModulo.toLowerCase()}`}
+                href={`/modulo/${selectedModulo.toLowerCase()}/${
+                  currentSubModulo?.toLowerCase().replace(/\s+/g, "-") || ""
+                }`}
               >
                 Ver módulo completo
               </Button>

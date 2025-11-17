@@ -2,7 +2,6 @@
 
 import React from "react";
 import Header from "@/app/components/UI/Header/Header";
-import Image from "next/image";
 
 import ChipsModulosNavegacion from "@/app/components/UI/ChipsModulosNavegacion/ChipsModulosNavegacion";
 import ComponenteVideoModulo from "@/app/components/UI/ComponenteVideoModulo/ComponenteVideoModulo";
@@ -56,10 +55,6 @@ const Page = ({ params }) => {
             <ComponenteVideoModulo href="/singleVideo/1" status={true}>
               Chau
             </ComponenteVideoModulo>
-            <ComponenteVideoModulo>Chau</ComponenteVideoModulo>
-            <ComponenteVideoModulo>Chau</ComponenteVideoModulo>
-            <ComponenteVideoModulo>Chau</ComponenteVideoModulo>
-            <ComponenteVideoModulo>Chau</ComponenteVideoModulo>
             <ComponenteVideoModulo>Chau</ComponenteVideoModulo>
           </div>
         </section>

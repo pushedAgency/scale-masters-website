@@ -30,13 +30,15 @@ const page = () => {
         }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <EmojiSubtitle>⏳ Contenidos recientes</EmojiSubtitle>
+        <div className="mt-4">
+          {/*<EmojiSubtitle>⏳ Contenidos recientes</EmojiSubtitle>*/}
+        </div>
 
         <motion.div
           variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
           transition={{ delay: 0.3 }}
         >
-          <VideosRecientes />
+          {/*<VideosRecientes />*/}
         </motion.div>
 
         <motion.div

@@ -1,10 +1,15 @@
-.divComponenteVideoModulo{
-    width: 100%;
-    border-radius: 1em;
-    padding: 1.5em;
-    justify-items:flex-start;
+.divComponenteVideoModulo {
+  width: 100%;
+  border-radius: 1em;
+  padding: 1.5em;
+  justify-items: flex-start;
+  border: 1px solid rgba(0, 0, 0, 0);
 }
 
-.divComponenteVideoModulo:hover{
-    background-color: var(--presionables-terceriarios-hover);
+.componenteVideoModuloImg {
+
+}
+
+.divComponenteVideoModulo:hover {
+  background-color: var(--presionables-terceriarios-hover);
 }
