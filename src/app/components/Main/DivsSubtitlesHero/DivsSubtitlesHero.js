@@ -1,4 +1,5 @@
 import React from "react";
+import DivSubtitle from "@/app/components/UI/DivSubtitle/DivSubtitle";
 
 const DivsSubtitlesHero = () => {
   return (
