@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Suspense } from "react";
 
 import LoginHeroDiv from "@/app/components/Main/LoginHeroDiv/LoginHeroDiv";
 
@@ -13,8 +14,11 @@ export default function Home() {
         unoptimized
         className="mr-17 top-18 absolute"
       />
-      <section className=" z-100">
-        <LoginHeroDiv />
+
+      <section className="z-100">
+        <Suspense fallback={<div>Cargando…</div>}>
+          <LoginHeroDiv />
+        </Suspense>
       </section>
     </main>
   );
