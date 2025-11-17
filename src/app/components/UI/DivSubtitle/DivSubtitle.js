@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import styles from "@/app/components/UI/DivSubtitle/DivSubtitle";
+import styles from "@/app/components/UI/DivSubtitle/DivSubtitle.module.css";
 
 export default function DivSubtitle({ children }) {
   return (
